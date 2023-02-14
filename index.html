@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>Hotel Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="script.js"></script>
+
+<body>
+    <div class="container">
+        <div class="card custom-bg w-50 p-4 d-flex">
+            <div class="row">
+                <div class="pb-3 h3 text-left">Hotel Search</div>
+            </div>
+            <form id="hotel-form" onsubmit="return validateForm()">
+                <div class="row">
+                    <div class="form-group col-md align-items-start flex-column">
+                        <label for="destination" class="d-inline-flex">Destination</label>
+                        <input type="text" placeholder="City" class="form-control" id="destination" name="destination"
+                            required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md align-items-start flex-column">
+                        <label for="checkin-date" class=" d-inline-flex">Check-in</label>
+                        <input type="date" class="form-control" id="checkin-date" name="checkin-date"
+                            onkeydown="return false" required>
+                    </div>
+                    <div class="form-group col-md align-items-start flex-column">
+                        <label for="checkout-date" class=" d-inline-flex">Check-out</label>
+                        <input type="date" class="form-control" id="checkout-date" name="checkout-date"
+                            onkeydown="return false" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md align-items-start flex-column">
+                        <label for="guests" class="d-inline-flex col-auto">Guests</label>
+                        <select class="form-select" id="guests"
+                            onchange="javascript: dynamicDropdown(this.options[this.selectedIndex].value);">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md align-items-start flex-column">
+                        <label for="rooms" class="d-inline-flex col-auto">Rooms</label>
+                        <select class="form-select" id="rooms">
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-left col-auto">
+                        <button type="submit" class="btn btn-primary">Search hotels</button>
+                    </div>
+                    <div id="error" class="error text-danger"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

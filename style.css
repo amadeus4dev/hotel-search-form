@@ -1,0 +1,36 @@
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    width: 100px;
+    text-align: right;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .sublabel {
+    color:gray; 
+    margin:4px; 
+    font-size: 11px;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0050A0;
+    border: none;
+    cursor: pointer;
+  }
+
+  .custom-bg {
+    background-color: #F7F7F9;
+  }
