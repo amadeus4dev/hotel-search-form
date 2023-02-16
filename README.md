@@ -1,4 +1,4 @@
-## Flight Search Form
+## Hotel Search Form
 
 This repository contains a user-friendly hotel search form built using HTML, CSS, Bootstrap, and JavaScript. The form provides an intuitive and efficient way to search for hotels based on user preferences.
 
